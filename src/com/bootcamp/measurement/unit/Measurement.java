@@ -1,4 +1,4 @@
-package com.bootcamp.measurement;
+package com.bootcamp.measurement.unit;
 
 public abstract class Measurement {
 

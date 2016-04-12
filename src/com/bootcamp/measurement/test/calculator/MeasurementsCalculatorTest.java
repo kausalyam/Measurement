@@ -1,7 +1,9 @@
-import com.bootcamp.measurement.Centimetre;
-import com.bootcamp.measurement.Measurement;
-import com.bootcamp.measurement.Metre;
+package com.bootcamp.measurement.test.calculator;
+
 import com.bootcamp.measurement.calculator.MeasurementsCalculator;
+import com.bootcamp.measurement.unit.Centimetre;
+import com.bootcamp.measurement.unit.Measurement;
+import com.bootcamp.measurement.unit.Metre;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +39,7 @@ public class MeasurementsCalculatorTest {
         float expectedValue = 22.0f;
         float incorrectValue = 2200.0f;
 
-        float actualValue = MeasurementsCalculator.getSum(metre, centiMetre);
+        float actualValue = MeasurementsCalculator.getSumInTermsOfFirstMeasurementUnit(metre, centiMetre);
 
         assertEquals(expectedValue, actualValue, 0);
         assertNotEquals(incorrectValue, actualValue, 0);
@@ -51,7 +53,7 @@ public class MeasurementsCalculatorTest {
         float incorrectValue = 22.0f;
 
         MeasurementsCalculator measurementCalc = new MeasurementsCalculator();
-        float actualValue = MeasurementsCalculator.getSum(centiMetre, metre);
+        float actualValue = MeasurementsCalculator.getSumInTermsOfFirstMeasurementUnit(centiMetre, metre);
 
         assertEquals(expectedValue, actualValue, 0);
         assertNotEquals(incorrectValue, actualValue, 0);
@@ -64,7 +66,7 @@ public class MeasurementsCalculatorTest {
         float expectedValue = 40.0f;
         float incorrectValue = 400.0f;
 
-        float actualValue = MeasurementsCalculator.getSum(firstCentiMetre, secondCentiMetre);
+        float actualValue = MeasurementsCalculator.getSumInTermsOfFirstMeasurementUnit(firstCentiMetre, secondCentiMetre);
 
         assertEquals(expectedValue, actualValue, 0);
         assertNotEquals(incorrectValue, actualValue, 0);
@@ -77,7 +79,7 @@ public class MeasurementsCalculatorTest {
         float expectedValue = 3.0f;
         float incorrectValue = 3000.0f;
 
-        float actualValue = MeasurementsCalculator.getSum(firstMetre, secondMetre);
+        float actualValue = MeasurementsCalculator.getSumInTermsOfFirstMeasurementUnit(firstMetre, secondMetre);
 
         assertEquals(expectedValue, actualValue, 0);
         assertNotEquals(incorrectValue, actualValue, 0);

@@ -1,4 +1,6 @@
-package com.bootcamp.measurement;
+package com.bootcamp.measurement.unit;
+
+import com.bootcamp.measurement.unit.Measurement;
 
 public class Metre extends Measurement {
     private static final float conversionFactorForMillimetre = 1000.0f;

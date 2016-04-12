@@ -1,4 +1,4 @@
-package com.bootcamp.measurement;
+package com.bootcamp.measurement.unit;
 
 public class Centimetre extends Measurement {
     private static final float conversionFactorForMillimetre = 10.0f;

@@ -1,6 +1,6 @@
 package com.bootcamp.measurement.calculator;
 
-import com.bootcamp.measurement.Measurement;
+import com.bootcamp.measurement.unit.Measurement;
 
 public class MeasurementsCalculator {
 
@@ -8,7 +8,7 @@ public class MeasurementsCalculator {
         return firstMeasurement.convertToMilliMetres() == secondMeasurement.convertToMilliMetres();
     }
 
-    public static float getSum(Measurement firstMeasurement, Measurement secondMeasurement) {
+    public static float getSumInTermsOfFirstMeasurementUnit(Measurement firstMeasurement, Measurement secondMeasurement) {
         float sumValueAsMillimetre;
 
         sumValueAsMillimetre = firstMeasurement.convertToMilliMetres() + secondMeasurement.convertToMilliMetres();
